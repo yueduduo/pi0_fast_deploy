@@ -55,8 +55,8 @@
    ```bash
    conda create -n pi0_demo python=3.10
    conda activate pi0_demo
-   git clone [项目地址]  # 替换为实际仓库地址
-   cd [项目目录]         # 进入项目文件夹
+   git clone https://github.com/yueduduo/pi0_fast_deploy.git
+   cd pi0_fast_deploy
    pip install -r requirements.txt
    ```
 
