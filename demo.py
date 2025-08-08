@@ -15,7 +15,7 @@ ENV_RESOLUTION = 256  # resolution used to render training data
 @dataclass
 class Args:
     host: str = "你的服务器地址"   # host address
-    port: int = 8000             # host port
+    port: int = 8000             # 你的服务器端口 host port
     
     resize_size: int = 224       
     

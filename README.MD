@@ -43,9 +43,10 @@
 
     # 4. 下载并解压模型权重（10G）
     wget https://www.modelscope.cn/models/masheng/pi0-fine-Tuned-Models/resolve/master/pi0_fast_libero.zip
-    unzip pi0_fast_libero.zip
+    unzip pi0_fast_libero.zip -d $HOME/.cache/openpi/openpi-assets/checkpoints/
 
-    # 5. 启动推理服务（若未手动下载模型，将自动从谷歌网盘获取）
+    # 5. 启动推理服务(会自动下载额外的文件)
+    export HF_ENDPOINT=https://hf-mirror.com
     uv run scripts/serve_policy.py --env LIBERO
     ```
 
@@ -60,8 +61,8 @@
    pip install -r requirements.txt
    ```
 
-2. **配置服务器地址**  
-   修改 demo.py 中 `Args.host` 参数，填写你的服务器 IP 地址 🔧
+2. **配置服务器地址和端口**  
+   修改 demo.py 中 `Args.host` 与 `Args.port` 参数，填写你的服务器 IP 地址 🔧
 
 3. **运行演示程序**  
    ```bash
