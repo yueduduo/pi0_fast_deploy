@@ -10,7 +10,8 @@
 
 
 ## 🛠️ 本地部署环境(已测试)
-- **Python 版本**：3.10 🐍
+- 操作系统: ubuntu20.04 (实测不支持windows)
+- **Python 版本**：3.10 
 - **依赖库**：
   - moviepy==2.2.1
   - msgpack_python==0.5.6
@@ -22,7 +23,7 @@
 
 ## ⚡ 快速启动指南
 
-### 【服务器端】部署（显存要求>16G）
+### 【服务器端】部署（显存要求>=24G）
 * 参考openpi官方部署Libero微调后模型
     ```bash
     #!/bin/bash
@@ -45,7 +46,7 @@
     wget https://www.modelscope.cn/models/masheng/pi0-fine-Tuned-Models/resolve/master/pi0_fast_libero.zip
     unzip pi0_fast_libero.zip -d $HOME/.cache/openpi/openpi-assets/checkpoints/
 
-    # 5. 启动推理服务(会自动下载额外的文件)
+    # 5. 启动推理服务(会自动连接到HuggingFace)
     export HF_ENDPOINT=https://hf-mirror.com
     uv run scripts/serve_policy.py --env LIBERO
     ```
@@ -61,7 +62,7 @@
    pip install -r requirements.txt
    ```
 
-2. **配置服务器地址和端口**  
+2. **配置服务器地址和端口**  下载额外的文件
    修改 demo.py 中 `Args.host` 与 `Args.port` 参数，填写你的服务器 IP 地址 🔧
 
 3. **运行演示程序**  
