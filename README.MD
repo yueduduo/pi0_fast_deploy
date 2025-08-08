@@ -68,6 +68,7 @@
    python demo.py
    ```
    在命令行输入`grasp the red box` 回车即可
+   > 第一次运行会有`段错误 (核心已转储)`，重试不再出现
 
 4. **结果保存**  
    运行生成的视频将保存至 `Args.video_out_path`（默认路径：`./output/videos`）📹
