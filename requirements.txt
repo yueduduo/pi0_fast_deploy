@@ -1,6 +1,6 @@
 moviepy==2.2.1
-msgpack_python==0.5.6
-numpy==2.3.2
-Pillow==11.3.0
+msgpack>=1.0.5
+numpy>=1.22.4,<2.0.0
+pillow>=9.0.0
 robosuite==1.5.1
-websockets==15.0.1
+websockets>=11.0

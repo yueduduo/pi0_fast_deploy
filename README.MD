@@ -14,11 +14,11 @@
 - **Python 版本**：3.10 
 - **依赖库**：
   - moviepy==2.2.1
-  - msgpack_python==0.5.6
-  - numpy==2.3.2
-  - Pillow==11.3.0
+  - msgpack>=1.0.5
+  - numpy>=1.22.4,<2.0.0
+  - pillow>=9.0.0
   - robosuite==1.5.1
-  - websockets==15.0.1
+  - websockets>=11.0
 
 
 ## ⚡ 快速启动指南
@@ -26,8 +26,6 @@
 ### 【服务器端】部署（显存要求>=24G）
 * 参考openpi官方部署Libero微调后模型
     ```bash
-    #!/bin/bash
-
     # 1. 创建并激活环境
     conda create -n openpi_env python=3.11 -y
     conda activate openpi_env
